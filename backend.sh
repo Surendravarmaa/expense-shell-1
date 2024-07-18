@@ -11,7 +11,7 @@ failure(){
 trap 'failure ${LINENO} "$BASH_COMMAND"' ERR
 
 
-dnf module disable nodejs -y &>>$LOGFILE
+dnf module disable nodejs:18 -y &>>$LOGFILE
 VALIDATE $? "Disabling default nodejs"
 
 dnf module enable nodejs:20 -y &>>$LOGFILE
