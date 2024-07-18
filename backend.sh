@@ -60,7 +60,7 @@ VALIDATE $? "Enabling backend"
 dnf install mysql -y &>>$LOGFILE
 VALIDATE $? "Installing Mysql client"
 
-mysql -h  172.31.67.129  -uroot -p${MYSQL_ROOT_PASSWORD} < /app/schema/backend.sql &>>$LOGFILE
+mysql -h  db.surendra.online  -uroot -p${MYSQL_ROOT_PASSWORD} < /app/schema/backend.sql &>>$LOGFILE
 VALIDATE $? "Schema loading"
 
 systemctl restarted backend &>>$LOGFILE
