@@ -61,5 +61,5 @@ VALIDATE $? "Installing Mysql client"
 mysql -h  db.surendra.online  -uroot -p${MYSQL_ROOT_PASSWORD} < /app/schema/backend.sql &>>$LOGFILE
 VALIDATE $? "Schema loading"
 
-systemctl restarted backend &>>$LOGFILE
+systemctl restart backend &>>$LOGFILE
 VALIDATE $? "Restarting backend"
