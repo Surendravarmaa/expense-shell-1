@@ -13,7 +13,7 @@ Y="\e[33m"
 N="\e[0m"
 
 echo "Please enter DB password: "
-read -s MYSQL_ROOT_PASSWORD
+read  MYSQL_ROOT_PASSWORD
 
 checkout(){
 if [ $USERID -ne 0 ]
